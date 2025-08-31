@@ -8,15 +8,15 @@
     <title>Rickshaw Garage</title>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-    <div class="my-auto mx-8">
-        <!-- Header -->
-        <div class="flex justify-between items-center my-4 mb-10">
-            <a class="text-2xl font-bold" href="/">Welcome to the Rickshaw Garage</a>
-            <a class="text-blue-600 font-medium hover:underline" href="/">Back to Home</a>
+<body class="bg-gray-50 mx-auto max-w-[1320px]">
+
+    <div class="my-8">
+        <div class="flex justify-between mb-10">
+            <h1 class="text-xl font-bold">Welcome to the Rickshaw Garage</h1>
+            <a class="text-black-500 hover:underline px-4 py-2 bg-slate-400" href="/create">Add New Item</a>
         </div>
 
-        <!-- Add New Item Form -->
+        <!-- Edit Item Form -->
         <div class="bg-white shadow rounded-2xl p-6 mb-10">
             <h3 class="text-xl font-semibold mb-4">Edit - {{ $inventory->item_name }}</h3>
             <form method="post" action="{{ route('update', $inventory->id) }}">
@@ -46,7 +46,7 @@
 
                     <div>
                         <label for="total_price" class="block text-sm font-medium mb-1">Total Price</label>
-                        <input type="number" id="total_price" name="total_price" readonly
+                        <input type="number" id="total_price" name="total_price" readonly value="{{ $inventory->total_price }}"
                             class="w-full rounded-xl border border-gray-300 p-2 bg-gray-100">
                     </div>
 
@@ -66,12 +66,10 @@
 
                 </div>
 
-               <a href="">
-                 <button type="submit"
+                <button type="submit"
                     class="mt-6 px-6 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">
-                    Add Item
+                    Update Item
                 </button>
-               </a>
             </form>
 
             <script>
@@ -85,13 +83,17 @@
                     totalInput.value = (quantity * price).toFixed(2);
                 }
 
+                // Calculate total on page load
+                document.addEventListener('DOMContentLoaded', function() {
+                    calculateTotal();
+                });
+
                 quantityInput.addEventListener('input', calculateTotal);
                 priceInput.addEventListener('input', calculateTotal);
             </script>
 
         </div>
 
-    </div>
     </div>
 </body>
 

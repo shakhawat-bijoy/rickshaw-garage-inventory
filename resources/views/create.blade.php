@@ -8,12 +8,12 @@
     <title>Rickshaw Garage</title>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-    <div class="my-auto mx-8">
-        <!-- Header -->
-        <div class="flex justify-between items-center my-4 mb-10">
-            <a class="text-2xl font-bold" href="/">Welcome to the Rickshaw Garage</a>
-            <a class="text-blue-600 font-medium hover:underline" href="/">Back to Home</a>
+<body class="bg-gray-50 mx-auto max-w-[1320px]">
+
+    <div class="my-8">
+        <div class="flex justify-between mb-10">
+            <h1 class="text-xl font-bold">Welcome to the Rickshaw Garage</h1>
+            <a class="text-black-500 hover:underline px-4 py-2 bg-slate-400" href="/">Back to Home</a>
         </div>
 
             <!-- Add New Item Form -->

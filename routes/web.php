@@ -19,3 +19,6 @@ Route::get('/edit/{id}', [InventoryController::class, 'editData'])->name('edit')
 
 
 Route::post('/update/{id}', [InventoryController::class, 'updateData'])->name('update');
+ 
+
+Route::delete('/delete/{id}', [InventoryController::class, 'deleteData'])->name('delete');
