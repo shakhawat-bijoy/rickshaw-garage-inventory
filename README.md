@@ -1,61 +1,315 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Rickshaw Garage - Smart Inventory Management System
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-12.0-red.svg" alt="Laravel Version">
+  <img src="https://img.shields.io/badge/PHP-8.2+-blue.svg" alt="PHP Version">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg" alt="Status">
 </p>
 
-## About Laravel
+A modern, responsive inventory management system specifically designed for rickshaw garages. Built with Laravel 12 and featuring a beautiful Tailwind CSS interface, this system helps garage owners efficiently track parts, monitor stock levels, and manage their inventory operations.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🎯 Core Functionality
+- **Smart Inventory Tracking** - Add, edit, update, and delete inventory items
+- **Real-time Stock Monitoring** - Automatic low stock alerts (items with quantity < 5)
+- **Multi-location Support** - Track items across different storage locations
+- **Price Management** - Individual and total price calculations
+- **Search & Filter** - Advanced search by item name, location, or status
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🎨 User Experience
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- **Interactive Dashboard** - Dynamic banner slider with inventory statistics
+- **Modern UI** - Clean, professional interface with Tailwind CSS
+- **Toast Notifications** - Real-time feedback for user actions
+- **Confirmation Modals** - Safe deletion with confirmation dialogs
 
-## Learning Laravel
+### 📊 Dashboard Analytics
+- Total items count
+- Total stock quantity
+- Storage locations overview
+- Low stock items alert
+- Total inventory value calculation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🏪 Storage Locations
+- Main Workshop
+- Storage Room
+- Parts Counter
+- Tool Shed
+- Office
+- Outdoor Storage
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🚀 Technology Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Backend Framework:** Laravel 12.0
+- **Frontend:** Blade Templates + Tailwind CSS
+- **Database:** SQLite (configurable)
+- **JavaScript:** Vanilla JS with modern ES6+
+- **Notifications:** Toastify.js
+- **Icons:** Heroicons (via Tailwind)
+- **PHP Version:** 8.2+
 
-## Laravel Sponsors
+## 📦 Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Prerequisites
+- PHP 8.2 or higher
+- Composer
+- Node.js & NPM (for asset compilation)
+- SQLite (or your preferred database)
 
-### Premium Partners
+### Setup Instructions
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd rickshaw-garage
+   ```
 
-## Contributing
+2. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Install and build frontend assets**
+   ```bash
+   npm install
+   npm run build
+   ```
 
-## Code of Conduct
+4. **Environment configuration**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Database setup**
+   ```bash
+   # Create SQLite database file
+   touch database/database.sqlite
+   
+   # Run migrations
+   php artisan migrate
+   
+   # (Optional) Seed test data
+   php artisan db:seed
+   ```
 
-## Security Vulnerabilities
+6. **Start the development server**
+   ```bash
+   php artisan serve
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Access the application**
+   Open your browser and visit: `http://localhost:8000`
 
-## License
+## 🗄️ Database Schema
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Inventories Table
+| Column | Type | Description |
+|--------|------|-------------|
+| id | Primary Key | Auto-incrementing ID |
+| item_name | String | Name of the inventory item |
+| quantity | Integer | Current stock quantity |
+| price | Decimal(10,2) | Individual item price |
+| total_price | Decimal(10,2) | Total price (quantity × price) |
+| location | String | Storage location |
+| created_at | Timestamp | Record creation time |
+| updated_at | Timestamp | Last update time |
+
+## 🛣️ Routes
+
+| Method | URI | Action | Name |
+|--------|-----|--------|------|
+| GET | `/` | Show dashboard with all inventory items | home |
+| GET | `/create` | Show add new item form | - |
+| POST | `/store` | Store new inventory item | store |
+| GET | `/edit/{id}` | Show edit form for specific item | edit |
+| POST | `/update/{id}` | Update specific inventory item | update |
+| DELETE | `/delete/{id}` | Delete specific inventory item | delete |
+
+## 🎛️ Key Components
+
+### Controllers
+- **InventoryController** - Handles all CRUD operations for inventory management
+
+### Models
+- **Inventory** - Eloquent model for inventory items
+- **User** - Default Laravel user model (for future authentication features)
+
+### Views
+- **welcome.blade.php** - Main dashboard with inventory listing
+- **create.blade.php** - Add new inventory item form
+- **edit.blade.php** - Edit existing inventory item form
+
+### Features in Detail
+
+#### 🔍 Search Functionality
+- Real-time search as you type
+- Search across item names, locations, and stock status
+- Instant results with no page reload
+
+#### 📱 Responsive Design
+- Mobile-first approach
+- Optimized for all screen sizes
+- Touch-friendly interface
+
+#### 🚨 Smart Alerts
+- Automatic low stock detection
+- Visual indicators for stock status
+- Toast notifications for user actions
+
+#### 🎠 Interactive Banner
+- Auto-rotating promotional banners
+- Manual navigation with dots and arrows
+- Pause on hover functionality
+
+## 🔧 Configuration
+
+### Environment Variables
+Key environment variables in your `.env` file:
+```env
+APP_NAME="Rickshaw Garage"
+APP_ENV=local
+APP_KEY=base64:your-generated-key
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=sqlite
+DB_DATABASE=/absolute/path/to/database/database.sqlite
+```
+
+### Customization Options
+
+#### Adding New Storage Locations
+Update the location options in both `create.blade.php` and `edit.blade.php`:
+```html
+<option>Your New Location</option>
+```
+
+#### Modifying Low Stock Threshold
+Currently set to 5 items. To change, update the condition in:
+- Dashboard statistics
+- Status indicators
+- Any related calculations
+
+## 🧪 Development & Testing
+
+### Running Tests
+```bash
+php artisan test
+```
+
+### Code Style
+```bash
+./vendor/bin/pint
+```
+
+### Development Server with Watching
+```bash
+composer run dev
+```
+
+This starts:
+- Laravel development server
+- Queue worker
+- Application logs
+- Vite asset watcher
+
+## 📝 Usage Examples
+
+### Adding a New Item
+1. Click "Add New Item" button
+2. Fill in the form:
+   - Item Name: "Brake Pads"
+   - Quantity: 10
+   - Price: 50.00
+   - Location: "Main Workshop"
+3. Total price is calculated automatically
+4. Click "Add Item" to save
+
+### Searching Inventory
+- Use the search box to find items by name, location, or status
+- Results update in real-time as you type
+- Clear search to show all items
+
+### Managing Stock
+- Items with quantity < 5 are automatically marked as "Low Stock"
+- Use the dashboard stats to monitor overall inventory health
+- Edit items to update quantities and prices
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Create a Pull Request
+
+## 📋 TODO / Future Enhancements
+
+- [ ] User authentication and role-based access
+- [ ] Inventory reporting and analytics dashboard
+- [ ] Export functionality (CSV, PDF)
+- [ ] Barcode scanning integration
+- [ ] Automated reorder points and purchase orders
+- [ ] Multi-language support
+- [ ] Advanced filtering options
+- [ ] Inventory history tracking
+- [ ] API endpoints for mobile app integration
+- [ ] Email notifications for low stock
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Database Connection Error**
+```bash
+# Ensure SQLite file exists and is writable
+touch database/database.sqlite
+chmod 664 database/database.sqlite
+```
+
+**Asset Loading Issues**
+```bash
+# Rebuild assets
+npm run build
+php artisan config:clear
+```
+
+**Permission Errors**
+```bash
+# Set proper permissions
+chmod -R 755 storage bootstrap/cache
+```
+
+## 🔒 Security
+
+- CSRF protection on all forms
+- Input validation on all user inputs
+- SQL injection prevention through Eloquent ORM
+- XSS protection through Blade templating
+
+## 📄 License
+
+This project is open-sourced software.
+
+## 👨‍💻 Developer
+
+**Shakhawat Bijoy**  
+*Passionate Frontend Developer*
+
+- 🌐 Website: [shakhawat-bijoy.vercel.app](https://shakhawat-bijoy.vercel.app/)
+- 💼 LinkedIn: [linkedin.com/in/shakhawat-bijoy](https://linkedin.com/in/shakhawat-bijoy)
+- 📘 Facebook: [facebook.com/bijoy1x](https://www.facebook.com/bijoy1x)
+
+## 📞 Support
+
+For support, please contact:
+- 📧 Email: shakhawatbijoy1@gmail.com
+- 📱 Phone: +880 1704-446708
+- 📍 Address: 932/East Raza Bazar, Dhanmondi, Dhaka 1205, Bangladesh
+
+---
+
+**Built with ❤️ for the rickshaw garage community in Bangladesh**
