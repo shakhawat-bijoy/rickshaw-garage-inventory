@@ -3,7 +3,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-12.0-red.svg" alt="Laravel Version">
   <img src="https://img.shields.io/badge/PHP-8.2+-blue.svg" alt="PHP Version">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg" alt="Status">
 </p>
 
@@ -62,7 +61,7 @@ A modern, responsive inventory management system specifically designed for ricks
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/shakhawat-bijoy/rickshaw-garage-inventory.git
    cd rickshaw-garage
    ```
 
