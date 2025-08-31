@@ -11,9 +11,16 @@
 <body class="bg-gray-50 mx-auto max-w-[1320px]">
 
     <div class="my-8">
-        <div class="flex justify-between mb-10">
-            <a href="/" class="text-xl font-bold">Welcome to the Rickshaw Garage</a>
-            <a class="text-black-800 font-medium hover:underline px-4 py-2 bg-slate-400 rounded-lg" href="/">Back to Home</a>
+        <div class="flex justify-between mb-10 items-center bg-white shadow rounded-2xl p-6">
+            <a href="/" class="text-xl font-bold">
+                <div>
+                    <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        Rickshaw Garage
+                    </h1>
+                    <p class="text-gray-600 text-sm font-medium">Smart Inventory Management System</p>
+                </div>
+            </a>
+            <a class="text-white font-medium hover:shadow-lg px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg transition-all duration-300 transform hover:scale-105" href="/">Back to Home</a>
         </div>
 
         <!-- Add New Item Form -->
